@@ -1,0 +1,46 @@
+body{
+    background: lightblue;
+}
+section{
+    background: #ffffff;
+}
+h1 {
+    color: rgb(255, 196, 0);
+}
+p {
+    color: grey;
+}
+h2 {
+    color: #434123;
+}
+
+.red-box{
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+}
+
+.green-box{
+    width: 100px;
+    height: 100px;
+    background-color: lightgreen;
+}
+
+.dropzone {
+    width: 200px;
+    height: 20px;
+    background: blueviolet;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  #draggable {
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    background: white;
+  }
+
+  nav > a {
+      background-color: rgb(0, 217, 255);
+  }
