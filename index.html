@@ -1,84 +1,85 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-</head>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <a href="index.html">Strona główna</a>
-            <a href="nauka-html.html">Nauka html</a>
-            <a href="nauka-drag.html">Nauka drag</a>
-        </nav>
+      <nav class="navigation">
+        <a class="navigation__link navigation__link--homepage" href="index.html"
+          >Strona główna</a
+        >
+        <a class="navigation__link" href="nauka-html.html">Nauka html</a>
+        <a class="navigation__link" href="nauka-drag.html">Nauka drag</a>
+      </nav>
     </header>
 
     <main>
-        <header id='top'>
-            <h1>Mikołaj Korzeniowski - Homepage</h1>
-        </header>
+      <header class="main-header" id="top">
+        <h1>Mikołaj Korzeniowski - Homepage</h1>
+      </header>
 
-        <section>
-            <h2>Kim jestem?</h2>
-            <p>Hej! na co dzień uczę się frontendu</p>
-            <a href="#section_2"> Menu </a>
-        </section>
-        <section>
-            <h2>Notatki z Gita</h2>
-            <h3>Postawowy workflow</h3>
-            <p>Workflow</p>
-            <p>Git init</p>
-            <p>GIt add .</p>
-            <p>Git commit -m " "</p>
-            <h3>Rozszerzeenie</h3>
-            <p>Warto dodać do visula studio code rozszerzenie - git leans</p>
-        </section>
+      <section class="welcome-section">
+        <h2 class="welcome-section__header">Kim jestem?</h2>
+        <p>
+          Hej! na co dzień uczę się frontendu. Przerabiam teraz kurs od Korsana
+        </p>
+      </section>
+      <section class="section-box">
+        <h2 style="section-box__title">Notatki z Gita</h2>
+        <h3 style="section_box__subtitle">Postawowy workflow</h3>
+        <p>Workflow</p>
+        <p>Git init</p>
+        <p>GIt add .</p>
+        <p>Git commit -m " "</p>
+        <h3 style="section_box__subtitle">Rozszerzeenie</h3>
+        <p>Warto dodać do visula studio code rozszerzenie - git leans</p>
+      </section>
 
-        <section>
-            <h2>Notakit z WTF:</h2>
-            <article>
-                <h3>Jak stworzyć prawidłowego HTML-a</h3>
-                <p>To będzie krótki post al ebędzie łamanie lini <br>
-                    tutaj </p>
-            </article>
-            <article>
-                <h3>Czy nagtwania szkolenia to prosta sprawa</h3>
-                <p>I tak i nie</p>
-            </article>
-        </section>
-        <section>
-            <h2>Przydatne Linki</h2>
-            <a href="https://validator.w3.org/nu/#textarea">Validator</a>
-            <a href="https://www.w3.org/TR/CSS/#css-levels">W3.org - CSS</a>
-        </section>
-        <section id="section_2">
-            <h2> Lorem troche</h2>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, eius repellendus! Est eligendi, soluta
-                odit animi ratione ad vel quis esse earum sapiente officia error aliquam rerum beatae magnam ea?
-            </p>
-        </section>
-        <section>
-            <h2>Nie wiem czy tak ustawiony monitor to jest optimum moliwości</h2>
-            <img src="tree.jpg" width="300" alt="zdjecie drzewa">
-        </section>
-        <article>
-            <h3>Wrażenia z kursu</h3>
-            <p>Moje przemyślenia po kursie...</p>
+      <section class="section-box">
+        <h2 style="section-box__title">Notakit z WTF:</h2>
+        <article class="section-box__article">
+          <h3 class="section-box__article-title">Jak stworzyć prawidłowego HTML-a</h3>
+          <p class="section-box__aritcle-content">
+            To będzie krótki post al ebędzie łamanie lini <br />
+            tutaj
+          </p>
         </article>
-        
+        <article>
+          <h3>Czy nagtwania szkolenia to prosta sprawa</h3>
+          <p>I tak i nie</p>
+        </article>
+      </section>
 
+      <section class="section-box">
+        <h2 style="section-box__title">Przydatne Linki</h2>
+        <a class="section-box__link" href="https://validator.w3.org/nu/#textarea">Validator</a>
+        <a class="section-box__link" href="https://www.w3.org/TR/CSS/#css-levels">W3.org - CSS</a>
+      </section>
+
+      <section class="section-box">
+        <h2 style="section-box__title">Lorem troche</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, eius
+          repellendus! Est eligendi, soluta odit animi ratione ad vel quis esse
+          earum sapiente officia error aliquam rerum beatae magnam ea?
+        </p>
+      </section>
+
+      <section class="section-box">
+        <h2 style="section-box__title">Nie wiem czy tak ustawiony monitor to jest optimum moliwości</h2>
+        <img src="tree.jpg" width="300" alt="zdjecie drzewa" />
+      </section>
     </main>
 
-    <footer>
-        Strona domowa M.Korzeniowski
-        <a href="#top"> Wróć na górę strony</a>
+    <footer class="footer">
+      <p class="footer__author">Strona domowa M.Korzeniowski</p>
+      <a class="footer__link" href="#top"> Wróć na górę strony</a>
     </footer>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
