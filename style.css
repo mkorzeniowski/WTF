@@ -55,7 +55,7 @@ a:visited {
   width: 100%;
 }
 
-.haburger-menu{
+.navigation__haburger-menu{
   display: block;
   position: absolute;
   right: 20px;
@@ -100,7 +100,7 @@ a:visited {
 }
 
 @media (min-width: 768px){
-  .haburger-menu{
+  .navigation__haburger-menu{
     display: none;
   }
   
