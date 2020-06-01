@@ -4,27 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
 
   <body>
     <header>
-      <nav class="navigation">
+      <nav class="navigation navigation--js">
         <a class="navigation__link navigation__link--homepage" href="index.html"
           >Strona główna</a
         >
         <a class="navigation__link" href="nauka-html.html">Nauka html</a>
         <a class="navigation__link" href="nauka-drag.html">Nauka drag</a>
       </nav>
+      <button class="navigation__haburger-menu navigation__haburger-menu--js"> Show Menu </button>
     </header>
 
-    <main>
-      <header class="main-header" id="top">
-        <h1>Mikołaj Korzeniowski - Homepage</h1>
+    <main class="main">
+      <header class="main__header" id="top">
+        <h1 class="main__title">Notaki z kursu WTF</h1>
+        <h2 class="main__subtitle">Mikołaj Korzeniowski</h2>
       </header>
 
-      <section class="welcome-section">
-        <h2 class="welcome-section__header">Kim jestem?</h2>
+      <section class="about">
+        <h2 class="about__header">Kim jestem?</h2>
+        <button class="button-js"> Click Me ! </button>
         <p>
           Hej! na co dzień uczę się frontendu. Przerabiam teraz kurs od Korsana
         </p>
@@ -59,6 +64,11 @@
         <h2 style="section-box__title">Przydatne Linki</h2>
         <a class="section-box__link" href="https://validator.w3.org/nu/#textarea">Validator</a>
         <a class="section-box__link" href="https://www.w3.org/TR/CSS/#css-levels">W3.org - CSS</a>
+        <a href="https://devdocs.io/" class="section-box__link">https://devdocs.io/</a>
+        <a href="">caniuse</a>
+        <a href="">csstricks</a>
+        <a href="https://cssgradient.io/">gradienty</a>
+        <a href="http://html5pattern.com/Names">html pattern</a>
       </section>
 
       <section class="section-box">
