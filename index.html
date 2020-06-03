@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="normalize.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="main.css" type="text/css" />
   </head>
 
   <body>
@@ -18,7 +22,9 @@
         <a class="navigation__link" href="nauka-html.html">Nauka html</a>
         <a class="navigation__link" href="nauka-drag.html">Nauka drag</a>
       </nav>
-      <button class="navigation__haburger-menu navigation__haburger-menu--js"> Show Menu </button>
+      <button class="navigation__haburger-menu navigation__haburger-menu--js">
+        Show Menu
+      </button>
     </header>
 
     <main class="main">
@@ -27,28 +33,215 @@
         <h2 class="main__subtitle">Mikołaj Korzeniowski</h2>
       </header>
 
+      <!-- HTMLs -->
+      <section class="section">
+        <h2 class="section__title">HTML</h2>
+        <p class="section__description">To jest sekcja o znacznikach html</p>
+      </section>
+
+      <!-- CSS i SASS-->
+      <section class="section">
+        <h2 class="section__title">CSS & SASS</h2>
+        <p class="section__description">...</p>
+        <p>Grid jest bardziej do tworzenia całych layoutów; Flexbox raczej do centrowania i ustawiania elementów</p>
+        <pre class="pre">
+          <code>
+            grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );</code> 
+        </pre>
+        <p>Importowanie innych plików do jednego scss'a</p>
+        <pre class="pre">
+          <code>
+            @import 'mixins.scss';
+          </code>
+        </pre>
+        <p>Mixin</p>
+        <pre class="pre">
+          <code>
+            @mixin button{
+              height: 100px;
+              width: 200px;
+            }
+
+            // w kodzie 
+
+            .my-button{
+              @include button;
+            }
+          </code>
+        </pre>
+        <p>Mixiny jako funkcje</p>
+        <pre>
+          <code>
+            @mixin borderRadius($radius){
+              border-radius: $radius;
+            }
+          </code>
+        </pre>
+        <p>@extend</p>
+        <pre>
+          <code>
+            myButton{
+              @extend title  
+            }
+          </code>
+        </pre>
+        <p>Pisanie w sasie struktury bemowej</p>
+        <pre>
+          <code>
+            .section{
+              background: blue;
+              &__title{
+                padding: 10px;
+                &--special{
+                  color: pink;
+                }
+              }
+            }
+          </code>
+        </pre>
+        <h3>BEM - Block Element Modyfirer</h3>
+        <p>block__element--modyfirer</p>
+      </section>
+
+      <!-- Javascript -->
+      <section class="section">
+        <h2 class="section__title">JavaScript</h2>
+        <p class="section__description">To jest sekcja o js</p>
+        <p>Żeby importować pliki z innych plików javascriptowych trzeba w kodzie dodać 'module'</p>
+        <pre class="pre">
+          <code>
+&lt;script src="main.js" type="module">&lt/script>
+          </code>
+        </pre>
+        <p>Export</p>
+        <pre class="pre">
+          <code>
+export const myFunction = function(){console.log('This is my function')}
+          </code>
+        </pre>
+        <p>Import</p>
+        <pre class="pre">
+          <code>
+import {myFunction} from '/main.js';
+          </code>
+        </pre>
+        <p>Może też być eksport domyślny</p>
+      </section>
+
+      <!-- Node -->
+      <section class="section">
+        <h2 class="section__title">NODE.js</h2>
+        <p class="section__description">To jest sekcja o node js</p>
+        <p></p>
+        <pre>
+          <code>
+
+          </code>
+        </pre>
+        <div>
+          <p>Workflow</p>
+          <ul>
+            <li>Tworzymy nowy projekt</li>
+            <li>Robimy jakieś tam skrytpy w node</li>
+            <li>inicjalizujemy npm'a</li>
+            <li>w package.JSON wpisujemy skrypty np. node myFile.js </li>
+            <li>W konosoli możemy uzywać poleceń do wywoływania naszych sktyptów</li>
+          </ul>
+        </div>
+      </section>
+
+      <!--npm -->
+      <section class="section">
+        <h2 class="section__title">npm/h2>
+        <p class="section__description">
+          Przydaten rzeczy
+        </p>
+        <pre class="pre">
+          <code>
+            npm init -y // inicjalizacja z pustym plikiem JSON
+            npm install node-sass
+            npx node-sass -w main.scss main.css // -w jest od watch
+            npm run sass // to jest po ustawieniu już w konfiguracji
+          </code>
+        </pre>
+        <p>Ctrl + C - przerywa działanie skryptu w konsoli</p>
+      </section>
+              
+
+      <!-- VISUAL STUDIO CODE -->
+      <section class="section">
+        <h2 class="section__title">VISUAL STUDIO</h2>
+        <p class="section__description">
+          Przydaten rzeczy
+        </p>
+        <p>
+          Tworzenie podstwowej struktury html poprzez podanie znaku ! i zatwierdzeniu enterem
+        </p>
+        <p>Ctrl + Shift + P -> format document</p>
+        <p>Przydatne wtyczki:
+          <ul>
+            <li>Live server</li>
+          </ul>
+        </p>
+      </section>
+
+      <!-- wolne myśli -->
+      <section class="section">
+        <h2 class="section__title">Wolne myśli</h2>
+        <p class="section__description">
+          Tutaj luźne pojęcia i myśli wyciągnięte z kurs
+        </p>
+        <p>
+          Nie zawsze trzeba robić skomplikowaną strukturę projektu. Czasem
+          wystarczy live sever w przeglądarce i podgląd na sass
+        </p>
+        <p>
+          Żeby odpalić edytor możemy wejść do wybranego katalogu; wpisać w
+          ścieżce cmd a następnie wpisać code .
+        </p>
+        <pre class="pre"><code>
+            code .</code>
+        </pre>
+        <p>Gatsby.js -> budowanie stron starycznych. Nie wymaga połączenia z bazą danych</p>
+        <p>Nie uczyc się wszystkiego na pamięć, wystarczy jak wiemy że coś takiego jest</p>
+        <p>Typescript</p>
+        <p>overreacted - blog o javascript i reactcie</p>
+        <p>Hello Roman - kurs recta</p>
+        <p>Heroku</p>
+        <p>CSS design awards</p>
+        <p>nitify cms</p>
+        <p>firebase</p>
+        <p>backend do zarządzania z bazą danych</p>
+        <p>Przeciągnięcie folderu do command lina powoduje pobranie jego ścieżki</p>
+        <p>Pojedyńczy &lt;br> jest spoko </p>
+      </section>
+
       <section class="about">
         <h2 class="about__header">Kim jestem?</h2>
-        <button class="button-js"> Click Me ! </button>
+        <button class="button-js">Click Me !</button>
         <p>
           Hej! na co dzień uczę się frontendu. Przerabiam teraz kurs od Korsana
         </p>
       </section>
+
+
       <section class="section-box">
-        <h2 style="section-box__title">Notatki z Gita</h2>
-        <h3 style="section_box__subtitle">Postawowy workflow</h3>
+        <h2 class="section-box__title">Notatki z Gita</h2>
+        <h3 class="section_box__subtitle">Postawowy workflow</h3>
         <p>Workflow</p>
         <p>Git init</p>
         <p>GIt add .</p>
         <p>Git commit -m " "</p>
-        <h3 style="section_box__subtitle">Rozszerzeenie</h3>
+        <h3 class="section_box__subtitle">Rozszerzeenie</h3>
         <p>Warto dodać do visula studio code rozszerzenie - git leans</p>
       </section>
 
       <section class="section-box">
-        <h2 style="section-box__title">Notakit z WTF:</h2>
+        <h2 class="section-box__title">Notakit z WTF:</h2>
         <article class="section-box__article">
-          <h3 class="section-box__article-title">Jak stworzyć prawidłowego HTML-a</h3>
+          <h3 class="section-box__article-title">
+            Jak stworzyć prawidłowego HTML-a
+          </h3>
           <p class="section-box__aritcle-content">
             To będzie krótki post al ebędzie łamanie lini <br />
             tutaj
@@ -61,18 +254,29 @@
       </section>
 
       <section class="section-box">
-        <h2 style="section-box__title">Przydatne Linki</h2>
-        <a class="section-box__link" href="https://validator.w3.org/nu/#textarea">Validator</a>
-        <a class="section-box__link" href="https://www.w3.org/TR/CSS/#css-levels">W3.org - CSS</a>
-        <a href="https://devdocs.io/" class="section-box__link">https://devdocs.io/</a>
+        <h2 class="section-box__title">Przydatne Linki</h2>
+        <a
+          class="section-box__link"
+          href="https://validator.w3.org/nu/#textarea"
+          >Validator</a
+        >
+        <a
+          class="section-box__link"
+          href="https://www.w3.org/TR/CSS/#css-levels"
+          >W3.org - CSS</a
+        >
+        <a href="https://devdocs.io/" class="section-box__link"
+          >https://devdocs.io/</a
+        >
         <a href="">caniuse</a>
         <a href="">csstricks</a>
         <a href="https://cssgradient.io/">gradienty</a>
         <a href="http://html5pattern.com/Names">html pattern</a>
+        <a href="">devdocs.io</a>
       </section>
 
       <section class="section-box">
-        <h2 style="section-box__title">Lorem troche</h2>
+        <h2 class="section-box__title">Lorem troche</h2>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, eius
           repellendus! Est eligendi, soluta odit animi ratione ad vel quis esse
@@ -81,7 +285,9 @@
       </section>
 
       <section class="section-box">
-        <h2 style="section-box__title">Nie wiem czy tak ustawiony monitor to jest optimum moliwości</h2>
+        <h2 class="section-box__title">
+          Nie wiem czy tak ustawiony monitor to jest optimum moliwości
+        </h2>
         <img src="tree.jpg" width="300" alt="zdjecie drzewa" />
       </section>
     </main>
@@ -90,6 +296,6 @@
       <p class="footer__author">Strona domowa M.Korzeniowski</p>
       <a class="footer__link" href="#top"> Wróć na górę strony</a>
     </footer>
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
   </body>
 </html>

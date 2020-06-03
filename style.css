@@ -1,66 +1,54 @@
-*{
-  font-family: 'Mukta', sans-serif;;
-}
+* {
+  font-family: 'Mukta', sans-serif; }
 
 body {
-  background: lightblue;
-}
+  background: lightblue; }
 
 section {
-  background: #ffffff;
-}
+  background: #ffffff; }
 
-
-.main{
+.main {
   max-width: 90%;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
-.main__header{
+.main__header {
   padding: 16px;
   color: #f1faee;
-  margin: 20px 0px;
-}
+  margin: 20px 0px; }
 
-.main__title{
+.main__title {
   font-size: 3rem;
-  margin: 0px;
-}
+  margin: 0px; }
 
-.main__subtitle{
+.main__subtitle {
   font-size: 1.5rem;
   margin: 0px;
-  padding: 0px;
-}
+  padding: 0px; }
 
 .dropzone {
   width: 200px;
   height: 20px;
   background: blueviolet;
   margin-bottom: 10px;
-  padding: 10px;
-}
+  padding: 10px; }
 
 a:visited {
-  color: none;
-}
+  color: none; }
 
-.header{
-  width: 100%;
-}
+.header {
+  width: 100%; }
+
 .navigation {
   background: #f1faee;
   color: #666666;
   height: 60px;
-  width: 100%;
-}
+  width: 100%; }
 
-.navigation__haburger-menu{
+.navigation__haburger-menu {
   display: block;
   position: absolute;
   right: 20px;
-  top: 20px;
-}
+  top: 20px; }
 
 .navigation__link {
   display: block;
@@ -70,56 +58,44 @@ a:visited {
   padding: 5px 20px;
   background-color: #457b9d;
   margin-right: 20px;
-  color: #fff;
-}
+  color: #fff; }
 
 .navigation__link--homepage {
-  background-color: #1d3557;
-}
+  background-color: #1d3557; }
 
+.section-box {
+  padding: 16px;
+  border: 1px solid slategray;
+  margin-bottom: 3px; }
 
-.section-box{
-    padding: 16px;
-    border: 1px solid slategray;
-    margin-bottom: 3px;
-}
+.footer {
+  max-width: 1000px;
+  margin: 0px auto; }
 
-.footer{
-    max-width: 1000px;
-    margin: 0px auto;
-}
+.about {
+  padding: 16px;
+  margin-bottom: 20px; }
 
-
-.about{
-    padding: 16px;
-    margin-bottom:
-}
-
-@media (max-width){
-
-}
-
-@media (min-width: 768px){
-  .navigation__haburger-menu{
-    display: none;
-  }
-  
-  .navigation{
-  text-decoration: none;
-  padding: 5px 20px;
-  background-color: #457b9d;
-  margin-right: 20px;
-  color: #fff;
-  }
-
-  .navigation__link {
-    display: inline-block;
-    height: 30px;
-    line-height: 30px;
+@media (min-width: 768px) {
+  .navigation__haburger-menu {
+    display: none; }
+  .navigation {
     text-decoration: none;
     padding: 5px 20px;
-    background-color: #129ff7;
+    background-color: #457b9d;
     margin-right: 20px;
-    color: #fff;
-  }
-}
+    color: #fff; }
+    .navigation__link {
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      text-decoration: none;
+      padding: 5px 20px;
+      background-color: #129ff7;
+      margin-right: 20px;
+      color: #fff; } }
+
+.pre {
+  background-color: #b6f9fc;
+  border: 2px solid red;
+  margin: -5px; }

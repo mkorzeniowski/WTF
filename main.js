@@ -1,17 +1,13 @@
-console.log("hello");
+import {sayHello, changeFooterByClassName} from '/function.js';
 
-let hello_message = "hello siemanko";
-const name = "Maciek";
-const age = 32;
+sayHello();
 
-console.log(`Chciałbym wam powiedzieć ${hello_message}`);
+changeFooterByClassName('footer')
 
 function calculate(myNumber) {
   return myNumber * 7;
 }
 
-const myResult = calculate(age);
-console.log(myResult);
 
 function scale(num1, num2) {
   const result = num1 * num2;
@@ -19,14 +15,11 @@ function scale(num1, num2) {
   return result;
 }
 
-
+console.log('siema')
 
 let scaleResult = scale(2, 6);
-console.log(typeof scaleResult);
+// const sayHello = (content) => console.log(`hello ${content}`);
 
-const sayHello = (content) => console.log(`hello ${content}`);
-
-sayHello('Maciek');
 
 // const myElement = document.querySelector('.main');
 // console.log(myElement)
@@ -37,9 +30,7 @@ sayHello('Maciek');
 //     console.log(this);
 // });
 
-console.table(console);
 
-console.time();
 
 
 const button = document.querySelector('.button-js');
