@@ -1,11 +1,32 @@
 * {
-  font-family: 'Mukta', sans-serif; }
+  font-family: "Mukta", sans-serif; }
 
 body {
-  background: lightblue; }
+  background: rgba(182, 182, 182, 0.904); }
 
-section {
-  background: #ffffff; }
+.section {
+  background: #fff;
+  padding: 16px;
+  margin-bottom: 5px; }
+
+.section__title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px; }
+
+.section__description {
+  text-align: center;
+  margin-top: -10px;
+  font-size: 0.9rem;
+  font-style: italic; }
+
+.line {
+  height: 1px;
+  width: 90%;
+  background-color: rgba(182, 182, 182, 0.904);
+  margin: 0px auto; }
 
 .main {
   max-width: 90%;
@@ -76,6 +97,24 @@ a:visited {
   padding: 16px;
   margin-bottom: 20px; }
 
+pre {
+  margin: -36px 0px; }
+
+.link-wrapper {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.link {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 0px 12px;
+  text-decoration: none;
+  margin: 5px;
+  color: #fff;
+  background-color: rgba(182, 182, 182, 0.904); }
+
 @media (min-width: 768px) {
   .navigation__haburger-menu {
     display: none; }
@@ -94,8 +133,3 @@ a:visited {
       background-color: #129ff7;
       margin-right: 20px;
       color: #fff; } }
-
-.pre {
-  background-color: #b6f9fc;
-  border: 2px solid red;
-  margin: -5px; }

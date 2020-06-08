@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+   
     <link
       href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="normalize.css" type="text/css" />
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <link rel="stylesheet" href="main.css" type="text/css" />
   </head>
 
   <body>
@@ -36,13 +38,26 @@
       <!-- HTMLs -->
       <section class="section">
         <h2 class="section__title">HTML</h2>
-        <p class="section__description">To jest sekcja o znacznikach html</p>
+        <p class="section__description">Wszystko o znacznikach html</p>
+        <p>Elementu typu button używamy do wszystkich interakcji stosowanych na stronie</p>
+        <pre>
+          <code>
+            &lt;button> Click Me! &lt;/button>
+          </code>
+        </pre>
+        <div class="line"></div>
+        <p> Znacznika a uzywamy do tworzenia nawigacji na stronie i odnośników</p>
+        <pre>
+          <code class="lang-html">
+            &lt;a href=""> ... &lt;/a>
+          </code>
+        </pre>
       </section>
 
       <!-- CSS i SASS-->
       <section class="section">
         <h2 class="section__title">CSS & SASS</h2>
-        <p class="section__description">...</p>
+        <p class="section__description">wszystko co stylach</p>
         <p>Grid jest bardziej do tworzenia całych layoutów; Flexbox raczej do centrowania i ustawiania elementów</p>
         <pre class="pre">
           <code>
@@ -50,23 +65,27 @@
         </pre>
         <p>Importowanie innych plików do jednego scss'a</p>
         <pre class="pre">
-          <code>
+          <code class="lang-sass">
             @import 'mixins.scss';
           </code>
         </pre>
         <p>Mixin</p>
         <pre class="pre">
           <code>
+            // tworzenie mixina
             @mixin button{
               height: 100px;
               width: 200px;
             }
 
             // w kodzie 
-
-            .my-button{
+            .new-button{
               @include button;
             }
+
+            //zmienne w SASS
+            $base-color: #fff; 
+            $font-size: 24px;
           </code>
         </pre>
         <p>Mixiny jako funkcje</p>
@@ -101,6 +120,28 @@
         </pre>
         <h3>BEM - Block Element Modyfirer</h3>
         <p>block__element--modyfirer</p>
+        <p> Pseudoselektory</p>
+        <pre class="pre">
+          <code>
+div::before // dajemy dwa znaki : -> tak jest poprawniej
+div::after  //może być urzyty np do jakiegoś ozdobnego elementu przed nagłówkiem;
+
+button:hover -> po najechaniu
+button:visited -> po odwiedzeniu
+
+first-child //wykonuje się na elemencie a nie na rodzicu! 
+selector:not -> wyrażenie logicznie
+          </code>
+        </pre>
+        <p> Media Queries - powinny być na końcu strony</p>
+        <pre>
+          <code>
+            @media screen and (max-width: 768px){
+
+            }
+          </code>
+        </pre>
+
       </section>
 
       <!-- Javascript -->
@@ -126,12 +167,21 @@ import {myFunction} from '/main.js';
           </code>
         </pre>
         <p>Może też być eksport domyślny</p>
+        <p>Manipulowanie klasami przy pomocy javascriptu</p>
+        <pre>
+          <code>
+            document.querySelector('.section').classList.add('className')
+            document.querySelector('.section').classList.remove('className')
+            document.querySelector('.section').contain('className')
+          </code>
+        </pre>  
       </section>
 
       <!-- Node -->
       <section class="section">
         <h2 class="section__title">NODE.js</h2>
         <p class="section__description">To jest sekcja o node js</p>
+        <p>Node wykorzystuje silnik przeglądakrki chrome poza przeglądarką</p>
         <p></p>
         <pre>
           <code>
@@ -152,22 +202,71 @@ import {myFunction} from '/main.js';
 
       <!--npm -->
       <section class="section">
-        <h2 class="section__title">npm/h2>
-        <p class="section__description">
-          Przydaten rzeczy
-        </p>
-        <pre class="pre">
+        <h2 class="section__title">npm</h2>
+        <p class="section__description">npm - jak budować z paczek </p>
+        <pre>
           <code>
             npm init -y // inicjalizacja z pustym plikiem JSON
-            npm install node-sass
-            npx node-sass -w main.scss main.css // -w jest od watch
+            npm install node-sass //instalacja modułu sass
+            npx node-sass -w main.scss main.css // kod do wywoływania w consoli
             npm run sass // to jest po ustawieniu już w konfiguracji
           </code>
         </pre>
-        <p>Ctrl + C - przerywa działanie skryptu w konsoli</p>
-      </section>
-              
+        <p>W package.json możemy skonfigutować swój skrypt</p>
+        <pre>
+          <code>
+            "scripts": {
+              "sass": "npx node-sass -w scss/style.scss style.css",
+              "test": "echo \"Error: no test specified\" && exit 1"
+            },
+          </code>
+        </pre>
+        <p>W powyższmy przypadku w pliku style.scss importujemy wszystkie pozostałe style dla strony, a następnie ją kompilujemy do jedngo pliku wynikowego</p>
 
+        <p>Ctrl + C - przerywa działanie skryptu w konsoli</p>
+        <pre>
+          <code>
+npm install &lt;nazwa-paczki> --save // jak ma być podpięty pod projekt
+npm install &lt;nazwa-paczki> --save-dev //jak ma być podpięty tylko do pracy przy projecie - wersja developerska
+
+          </code>
+        </pre>
+        <p>Nie commitujemy katalogu node modules. Wrzucamy do do pliku .gitignore
+          <pre class="pre">
+            <code>
+npx nazwa_paczki // użycie zainstalowanej już paczki 
+            </code>
+          </pre>
+        </p>
+      </section>
+
+      <!-- GIT -->
+      <section class="section">
+        <h2 class="section__title">GIT</h2>
+        <p class="section__description"> trochę o kontroli wersji</p>
+        <p>
+          .gitignore -> tutaj wpisujemy listę rzeczy, które nie będę śledzeone np. nie śledzimy plików z hasłami notatkami i modułów npm
+        </p>
+        <pre>
+          <code>
+            git branch -a //pokazuje wszystkie branche
+          </code>
+        </pre>
+        <p>Git Workflow</p>
+        <pre>
+          <code>
+            git init
+            git add .
+            git commit -m "commit message"
+          </code>
+        </pre>
+        <pre>
+          <code>
+            git push orign --all // wysłanie na serwer wszystkich branchy
+          </code>
+        </pre>
+      </section>
+        
       <!-- VISUAL STUDIO CODE -->
       <section class="section">
         <h2 class="section__title">VISUAL STUDIO</h2>
@@ -199,8 +298,10 @@ import {myFunction} from '/main.js';
           Żeby odpalić edytor możemy wejść do wybranego katalogu; wpisać w
           ścieżce cmd a następnie wpisać code .
         </p>
-        <pre class="pre"><code>
-            code .</code>
+        <pre class="pre">
+          <code>
+            code .
+          </code>
         </pre>
         <p>Gatsby.js -> budowanie stron starycznych. Nie wymaga połączenia z bazą danych</p>
         <p>Nie uczyc się wszystkiego na pamięć, wystarczy jak wiemy że coś takiego jest</p>
@@ -214,88 +315,47 @@ import {myFunction} from '/main.js';
         <p>backend do zarządzania z bazą danych</p>
         <p>Przeciągnięcie folderu do command lina powoduje pobranie jego ścieżki</p>
         <p>Pojedyńczy &lt;br> jest spoko </p>
+        <p>Można urzyć grida do animacji jakiejś przestrzeni</p>
+        <p>górne menu z przeźroczystym gradientem - > zasłania już elementy nachodzące na niego</p>
+      </section>
+      <section>
+        <h2>Pytania</h2>
+        <p>czy npx służy do wywoływania już zainstalowanych paczek?</p>
+        <p>Czy można podpiąć swoją stornę na innym hostingu pod git'a?</p>
       </section>
 
-      <section class="about">
-        <h2 class="about__header">Kim jestem?</h2>
-        <button class="button-js">Click Me !</button>
-        <p>
-          Hej! na co dzień uczę się frontendu. Przerabiam teraz kurs od Korsana
-        </p>
-      </section>
-
-
-      <section class="section-box">
-        <h2 class="section-box__title">Notatki z Gita</h2>
-        <h3 class="section_box__subtitle">Postawowy workflow</h3>
-        <p>Workflow</p>
-        <p>Git init</p>
-        <p>GIt add .</p>
-        <p>Git commit -m " "</p>
-        <h3 class="section_box__subtitle">Rozszerzeenie</h3>
-        <p>Warto dodać do visula studio code rozszerzenie - git leans</p>
-      </section>
-
-      <section class="section-box">
-        <h2 class="section-box__title">Notakit z WTF:</h2>
-        <article class="section-box__article">
-          <h3 class="section-box__article-title">
-            Jak stworzyć prawidłowego HTML-a
-          </h3>
-          <p class="section-box__aritcle-content">
-            To będzie krótki post al ebędzie łamanie lini <br />
-            tutaj
-          </p>
-        </article>
-        <article>
-          <h3>Czy nagtwania szkolenia to prosta sprawa</h3>
-          <p>I tak i nie</p>
-        </article>
-      </section>
-
-      <section class="section-box">
-        <h2 class="section-box__title">Przydatne Linki</h2>
+      <section class="section">
+        <h2 class="section__title">
+          Przydatne linki
+        </h2>
+        <div class="link-wrapper">
         <a
-          class="section-box__link"
+          class="link"
           href="https://validator.w3.org/nu/#textarea"
           >Validator</a
         >
-        <a
-          class="section-box__link"
-          href="https://www.w3.org/TR/CSS/#css-levels"
-          >W3.org - CSS</a
-        >
-        <a href="https://devdocs.io/" class="section-box__link"
-          >https://devdocs.io/</a
-        >
-        <a href="">caniuse</a>
-        <a href="">csstricks</a>
-        <a href="https://cssgradient.io/">gradienty</a>
-        <a href="http://html5pattern.com/Names">html pattern</a>
-        <a href="">devdocs.io</a>
+        <a class="link"
+        href="https://www.w3.org/TR/CSS/#css-levels"
+        >W3.org - CSS</a
+      >
+      <a href="https://devdocs.io/" class="link"
+        >https://devdocs.io/</a
+      >
+      <a href="" class="link">caniuse</a>
+      <a href="" class="link">csstricks</a>
+      <a href="https://cssgradient.io/" class="link">gradienty</a>
+      <a href="http://html5pattern.com/Names" class="link">html pattern</a>
+      <a href="" class="link">devdocs.io</a>
+    </div>
       </section>
 
-      <section class="section-box">
-        <h2 class="section-box__title">Lorem troche</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, eius
-          repellendus! Est eligendi, soluta odit animi ratione ad vel quis esse
-          earum sapiente officia error aliquam rerum beatae magnam ea?
-        </p>
-      </section>
-
-      <section class="section-box">
-        <h2 class="section-box__title">
-          Nie wiem czy tak ustawiony monitor to jest optimum moliwości
-        </h2>
-        <img src="tree.jpg" width="300" alt="zdjecie drzewa" />
-      </section>
-    </main>
 
     <footer class="footer">
       <p class="footer__author">Strona domowa M.Korzeniowski</p>
       <a class="footer__link" href="#top"> Wróć na górę strony</a>
     </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script src="main.js" type="module"></script>
   </body>
 </html>
