@@ -4,6 +4,28 @@
 body {
   background: rgba(182, 182, 182, 0.904); }
 
+.navigation {
+  background: #f1faee;
+  color: #666666;
+  grid-column-start: 2;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px; }
+
+.navigation__link {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  padding: 5px 20px;
+  background-color: #457b9d;
+  margin-right: 20px;
+  color: #fff; }
+
+.main {
+  grid-column-start: 3; }
+
 .section {
   background: #fff;
   padding: 16px;
@@ -58,31 +80,6 @@ a:visited {
 
 .header {
   width: 100%; }
-
-.navigation {
-  background: #f1faee;
-  color: #666666;
-  height: 60px;
-  width: 100%; }
-
-.navigation__haburger-menu {
-  display: block;
-  position: absolute;
-  right: 20px;
-  top: 20px; }
-
-.navigation__link {
-  display: block;
-  height: 30px;
-  line-height: 30px;
-  text-decoration: none;
-  padding: 5px 20px;
-  background-color: #457b9d;
-  margin-right: 20px;
-  color: #fff; }
-
-.navigation__link--homepage {
-  background-color: #1d3557; }
 
 .section-box {
   padding: 16px;

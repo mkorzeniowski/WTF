@@ -16,18 +16,17 @@
   </head>
 
   <body>
-    <header>
-      <nav class="navigation navigation--js">
-        <a class="navigation__link navigation__link--homepage" href="index.html"
-          >Strona główna</a
-        >
-        <a class="navigation__link" href="nauka-html.html">Nauka html</a>
-        <a class="navigation__link" href="nauka-drag.html">Nauka drag</a>
-      </nav>
-      <button class="navigation__haburger-menu navigation__haburger-menu--js">
-        Show Menu
-      </button>
-    </header>
+    <div class="page-grid">
+    <nav class="navigation">
+      <a href="#sectionHTML" class="navigation__link">HTML</a>
+      <a href="#sectionCSS" class="navigation__link">CSS & SASS</a>
+      <a href="#sectionJavascript" class="navigation__link">JavaScript</a>
+      <a href="#sectionNode" class="navigation__link">NODE</a>
+      <a href="#sectionNpm" class="navigation__link">NPM</a>
+      <a href="#sectionGIT" class="navigation__link">GIT</a>
+      <a href="#sectionVscode" class="navigation__link">VS Code</a>
+      <a href="#freeThoughts" class="navigation__link">Wolne myśli</a>
+    </nav>
 
     <main class="main">
       <header class="main__header" id="top">
@@ -36,7 +35,7 @@
       </header>
 
       <!-- HTMLs -->
-      <section class="section">
+      <section class="section" id="sectionHTML">
         <h2 class="section__title">HTML</h2>
         <p class="section__description">Wszystko o znacznikach html</p>
         <p>Elementu typu button używamy do wszystkich interakcji stosowanych na stronie</p>
@@ -55,7 +54,7 @@
       </section>
 
       <!-- CSS i SASS-->
-      <section class="section">
+      <section class="section" id="sectionCSS">
         <h2 class="section__title">CSS & SASS</h2>
         <p class="section__description">wszystko co stylach</p>
         <p>Grid jest bardziej do tworzenia całych layoutów; Flexbox raczej do centrowania i ustawiania elementów</p>
@@ -145,7 +144,7 @@ selector:not -> wyrażenie logicznie
       </section>
 
       <!-- Javascript -->
-      <section class="section">
+      <section class="section" id="sectionJavascript">
         <h2 class="section__title">JavaScript</h2>
         <p class="section__description">To jest sekcja o js</p>
         <p>Żeby importować pliki z innych plików javascriptowych trzeba w kodzie dodać 'module'</p>
@@ -178,7 +177,7 @@ import {myFunction} from '/main.js';
       </section>
 
       <!-- Node -->
-      <section class="section">
+      <section class="section" id="sectionNode">
         <h2 class="section__title">NODE.js</h2>
         <p class="section__description">To jest sekcja o node js</p>
         <p>Node wykorzystuje silnik przeglądakrki chrome poza przeglądarką</p>
@@ -201,7 +200,7 @@ import {myFunction} from '/main.js';
       </section>
 
       <!--npm -->
-      <section class="section">
+      <section class="section" id="sectionNpm">
         <h2 class="section__title">npm</h2>
         <p class="section__description">npm - jak budować z paczek </p>
         <pre>
@@ -241,7 +240,7 @@ npx nazwa_paczki // użycie zainstalowanej już paczki
       </section>
 
       <!-- GIT -->
-      <section class="section">
+      <section class="section" id="sectionGIT">
         <h2 class="section__title">GIT</h2>
         <p class="section__description"> trochę o kontroli wersji</p>
         <p>
@@ -268,7 +267,7 @@ npx nazwa_paczki // użycie zainstalowanej już paczki
       </section>
         
       <!-- VISUAL STUDIO CODE -->
-      <section class="section">
+      <section class="section" id="sectionVscode">
         <h2 class="section__title">VISUAL STUDIO</h2>
         <p class="section__description">
           Przydaten rzeczy
@@ -285,7 +284,7 @@ npx nazwa_paczki // użycie zainstalowanej już paczki
       </section>
 
       <!-- wolne myśli -->
-      <section class="section">
+      <section class="section" id="freeThoughts">
         <h2 class="section__title">Wolne myśli</h2>
         <p class="section__description">
           Tutaj luźne pojęcia i myśli wyciągnięte z kurs
@@ -349,7 +348,7 @@ npx nazwa_paczki // użycie zainstalowanej już paczki
     </div>
       </section>
 
-
+    </div>
     <footer class="footer">
       <p class="footer__author">Strona domowa M.Korzeniowski</p>
       <a class="footer__link" href="#top"> Wróć na górę strony</a>
