@@ -25,6 +25,7 @@
       <a href="#sectionNpm" class="navigation__link">NPM</a>
       <a href="#sectionGIT" class="navigation__link">GIT</a>
       <a href="#sectionVscode" class="navigation__link">VS Code</a>
+      <a href="#sectionChrome" class="navigation__link">Chrome Dev Tools</a>
       <a href="#freeThoughts" class="navigation__link">Wolne myśli</a>
     </nav>
 
@@ -51,16 +52,106 @@
             &lt;a href=""> ... &lt;/a>
           </code>
         </pre>
+        <p>Inputy</p>
+        <pre>
+          <code>
+            &lt input type="file"> // do wysyłania plików
+            &lt input type="submit"> // nie posiada labela
+            // metoda post -> do wysyłania strony 
+          </code>
+        </pre>
+        <p>table</p>
+        <pre>
+          <code>
+            &lt;table>
+              &lt;caption> rozpiska&lt;/caption>
+              &lt;thead>
+                &lt;tr>
+                  &lt;th>One&lt;/th>
+                  &lt;th>Two&lt;/th>
+                  &lt;th>Three&lt;/th>
+                &lt;/tr>
+              &lt;/thead>
+              &lt;tr>
+                &lt;th> 001 &lt;/th>
+                &lt;th> 002 &lt;/th>
+                &lt;th> 003 &lt;/th>
+              &lt;/tr>
+              &lt;tr>
+                &lt;th> AAA&lt;/th>
+                &lt;th>BBB&lt;/th>
+                &lt;th>CCC&lt;/th>
+              &lt;/tr>
+            &lt;/table>
+          </code>
+        </pre>
+        <p>Wyhcodzi coś takiego:</p>
+        <!-- table example -->
+        <table>
+          <caption> rozpiska</caption>
+          <thead>
+            <tr>
+              <th>One</th>
+              <th>Two</th>
+              <th>Three</th>
+            </tr>
+          </thead>
+          <tr>
+            <th> 001 </th>
+            <th> 002 </th>
+            <th> 003 </th>
+          </tr>
+          <tr>
+            <th> AAA</th>
+            <th>BBB</th>
+            <th>CCC</th>
+          </tr>
+        </table>
+        <!-- end of table example -->
       </section>
 
       <!-- CSS i SASS-->
       <section class="section" id="sectionCSS">
         <h2 class="section__title">CSS & SASS</h2>
         <p class="section__description">wszystko co stylach</p>
-        <p>Grid jest bardziej do tworzenia całych layoutów; Flexbox raczej do centrowania i ustawiania elementów</p>
+        <p>Background</p>
+        <pre>
+          <code>
+            background-clip: // jak chcemy żeby tło się zaczynało od paddingu albo borderu 
+            background-size: auto // wg rozmiaru obrazka
+            background-size: contain // zawsze cały obraz
+            background-size: cover // cała przestrzeń
+          </code>
+        </pre>
+        <p>FLOAT</p>
+        <pre>
+          <code>
+            float: left // to nie służy już do budowania layoutów
+            clear: both // rozszerza element rodzica do wysokości elementu;
+            overflow: hidden; // ustawiamy to w box container najczęściej do zdjęcia
+          </code>
+        </pre>
+        <p>Position</p>
+        <pre>
+          <code>
+            position: absolute; ustawiamy ją względem rodziaca o atrybucie relative
+            position: sticky; to jest fajna opacja - zostaje w jednym miejcu ekranu ale tylko względem jego rodzica
+          </code>
+        </pre>
+        <p>BOX SIZING</p>
+        <pre>
+          <code>
+            box-sizing: border-box; // content + padding border;
+            box-sizing: content-box; // tylko content
+          </code>
+        </pre>
+        <p>Grid jest bardziej do tworzenia całych layoutów;<br> Flexbox raczej do centrowania i ustawiania elementów</p>
         <pre class="pre">
           <code>
             grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );</code> 
+            grid-template-columns: 1fr 1fr 1fr // trzy równe kolumny
+            grid-column-gap: 16px;
+            row-gap: 16px;
         </pre>
         <p>Importowanie innych plików do jednego scss'a</p>
         <pre class="pre">
@@ -147,18 +238,29 @@ selector:not -> wyrażenie logicznie
       <section class="section" id="sectionJavascript">
         <h2 class="section__title">JavaScript</h2>
         <p class="section__description">To jest sekcja o js</p>
+        <p>zmienna - wskazuje jakąś wartość. sama w sobie nie jest wartością</p>
+        <p>zmienna ma undefined jeżeli zmienna jest zdefiniowana ale nie ma przypisanej wartości</p>
+        <p> Immutability (niezmienność) - zmienne są połączeniem do wartości a nie wartością samą w sobie</p>
+        <pre>
+          <code>
+            const name = "Maciek" // to jest stała i nie możemy jej przypisać innej wartośći
+            let age = 32 // to jest zmienna i może zostać zmieniona  // można używać camelCasa do zapistwania nazw zmiennych
+          </code>
+        </pre>
         <p>Żeby importować pliki z innych plików javascriptowych trzeba w kodzie dodać 'module'</p>
         <pre class="pre">
           <code>
 &lt;script src="main.js" type="module">&lt/script>
           </code>
         </pre>
+        <!-- export -->
         <p>Export</p>
         <pre class="pre">
           <code>
 export const myFunction = function(){console.log('This is my function')}
           </code>
         </pre>
+        <!-- import -->
         <p>Import</p>
         <pre class="pre">
           <code>
@@ -166,6 +268,7 @@ import {myFunction} from '/main.js';
           </code>
         </pre>
         <p>Może też być eksport domyślny</p>
+        <!-- manipulacja kalsami -->
         <p>Manipulowanie klasami przy pomocy javascriptu</p>
         <pre>
           <code>
@@ -174,6 +277,54 @@ import {myFunction} from '/main.js';
             document.querySelector('.section').contain('className')
           </code>
         </pre>  
+        <p> querySelector - nie używajmy getELementById albo po className</p>
+        <p>Logika</p>
+        <pre>
+          <code>
+            if(something != something){
+
+            }
+            // warunke sprawdza czy coś nie jest równe czemuś
+            
+            let number = 30;
+            if(30 === number ){ } // === taki znak sprawdza również typeOf
+
+            //wartosci folsy:
+            0, '', null, NaN, undefined
+
+            //wartości truthy
+            [], {}, 
+
+            const resuly = 32 > 20 ? age : false; // zwraca wartość podaną na początku jeżeli true 
+          </code>
+        </pre>
+        <p>typeof</p>
+        <pre>
+          <code>
+            let myNumber = 0;
+            console.log(typeof myNumber) // 'number'
+          </code>
+        </pre>
+        <p>innerHTML - może pokazać jaka jest wartość tej treści</p>
+        <p>funckcje</p>
+        <p> return - to zwraca funkcja </p>
+        <p> nie ma return - funkcja zwraca undefined</p>
+        <p> DRY - don't repeat yoursefl</p>
+        <p>arrow function</p>
+        <pre>
+          <code>
+            const greet = () => {
+
+            }
+            // arrow function nie tworzy nowego zakresu This
+            1. definiujemy funkcję w stałej
+            2. przypisujemy w nawiasie parametry (lub pusty nawais)
+            3. wstawiamy znak arrow => 
+            4. wpisujemy w nawiasy klamrowe blok funkcji
+          </code>
+        </pre>
+        <p>Obiekty</p>
+        <p>wskazania na zmienne proste można zmieniać</p>
       </section>
 
       <!-- Node -->
@@ -237,6 +388,13 @@ npx nazwa_paczki // użycie zainstalowanej już paczki
             </code>
           </pre>
         </p>
+        <p>Przydatne pakiety</p>
+        <a href="https://autoprefixer.github.io/">https://autoprefixer.github.io/</a>
+        <pre>
+          <code>
+            autoprefixer
+          </code>
+        </pre>
       </section>
 
       <!-- GIT -->
@@ -254,14 +412,63 @@ npx nazwa_paczki // użycie zainstalowanej już paczki
         <p>Git Workflow</p>
         <pre>
           <code>
-            git init
+            git init //zainicjalizowanie gita lokalnie
             git add .
             git commit -m "commit message"
+
+            git commit . -m "commit message" // w skrucie to co powyżej
+            git commit -a -m "commit message" // to samo
+
+            git status // sprawdzanie aktualnego stanu repozytorium
           </code>
         </pre>
         <pre>
           <code>
-            git push orign --all // wysłanie na serwer wszystkich branchy
+            git push origin --all // wysłanie na serwer wszystkich branchy
+          </code>
+        </pre>
+        <p>Merge</p>
+        <p>Workflow:</p>>
+        <pre>
+          <code>
+            git checkout master // przechodzimy na mastera
+            git merge --no-ff branch_name  // w commit message opisujemy co to był za feature 
+            git branch -d branch_name // usuwamy niepotrzebną już gałąź
+          </code>
+        </pre>
+        <p>Po takiej operacji możem z powrotem przejść na gałąź develop a na masterze zostawić ostanią aktywną wersję projektu</p>
+        <p>head - najnowszy commit na danej gałęzi</p>
+        <p>HEAD - aktualny comit (ostatni)</p>
+        <pre>
+          <code>
+            git checkout - // idziemy do HEAD
+            git checkout -b branch_name // tworzenie nowego branchu i checkout na niegoik          
+          </code>
+        </pre>
+        <p>CherryPick</p>
+        <pre>
+          <code>
+            git cherry-pick tagname 
+          </code>
+        </pre>
+        <p>TAGI</p>
+        <p>Tagi są nieruchome i trzymają sie commita</p>
+        <p>annotated tag:</p>
+        <pre>
+          <code>
+            git tag //wypisuje wszyskie Tagi
+            git tag -d tag_name //kasuje tag
+            git tag v1.2.2 // dodanie do aktualnego commitu tagu v1.2.2
+            git tag tag_name -a -m "description" // dodanie tagu z opisem
+          </code>
+        </pre>
+        <p>Fast forward merge wykona się jeżeli na gałęzi doceleowej nie dokonano git commit od czasu utworzenia gałęzi źródłowej</p>
+        <p>Dobra praktyka - branch per feature</p>
+        <p>tip - to ostatni commit w danej gałęzi</p>
+        <pre>
+          <code>
+            git show master^^ // pokazuje 2 commity przed masterem
+            git log --oneline // wypisuje wszystko oneline
           </code>
         </pre>
       </section>
@@ -283,12 +490,34 @@ npx nazwa_paczki // użycie zainstalowanej już paczki
         </p>
       </section>
 
+      <!-- Google chrome developers tools -->
+      <section class="section" id="sectionChrome">
+        <h2 class="section__title">Google Chrome - developers tools</h2>
+        <p class="section__description">
+          Przydaten rzeczy z konsoli
+        </p>
+        <p>w zakładce network można znaleść pliki, zdjęcia, filmy to co się łąduje na stronę. Można tu też znaleść błędy np. 404 że pliku nie znaleziono</p>
+        <p>Można zachaczć zakłądkę disable catche co pozwala na załadowanie stronę od nowa bez ciasteczek</p>
+        <img src="img/dev-tools-01.png" alt="">
+        <p>
+          Tworzenie podstwowej struktury html poprzez podanie znaku ! i zatwierdzeniu enterem
+        </p>
+        <p>Ctrl + Shift + P -> format document</p>
+        <p>Przydatne wtyczki:
+          <ul>
+            <li>Live server</li>
+          </ul>
+        </p>
+      </section>
+
       <!-- wolne myśli -->
       <section class="section" id="freeThoughts">
         <h2 class="section__title">Wolne myśli</h2>
         <p class="section__description">
           Tutaj luźne pojęcia i myśli wyciągnięte z kurs
         </p>
+        <p>debugging - usuwanie błędów</p>
+        <p>zapis pliku, sprawdzenie czy edytujemy dobry plik, odświerzeie przeglądarki</p>
         <p>
           Nie zawsze trzeba robić skomplikowaną strukturę projektu. Czasem
           wystarczy live sever w przeglądarce i podgląd na sass
